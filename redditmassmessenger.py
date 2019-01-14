@@ -14,7 +14,7 @@ class MassMessenger:
     def __init__(self, c_id, c_secret, user, pswd, list, message, subject):
         self.r = praw.Reddit(client_id=c_id,
                      client_secret=c_secret, password=pswd,
-                     user_agent='ginf', username=user)
+                     user_agent=user, username=user)
         self.list = self.get_users(list)
         self.message = self.get_contents(message)
         self.subject = self.get_contents(subject)
